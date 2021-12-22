@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Homework">
+      <UniqueIdentifier>{9324e7f2-f1e2-4801-8d67-e113d1b39bba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\homework">
+      <UniqueIdentifier>{f693d7cd-d91a-4b26-bbde-13a3fb849f70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\test">
+      <UniqueIdentifier>{c08c0be2-6813-4384-ba8c-be9c33973e12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\A_class">
+      <UniqueIdentifier>{ad478263-ffaf-46af-9119-82db28827569}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\myMemoTest">
+      <UniqueIdentifier>{518dc75e-609e-45ef-b6c9-d0d361b3fa2f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Homework_1207.cpp">
+      <Filter>소스 파일\Homework</Filter>
+    </ClCompile>
+    <ClCompile Include="test_1208.cpp">
+      <Filter>소스 파일\test</Filter>
+    </ClCompile>
+    <ClCompile Include="homework_1208.cpp">
+      <Filter>소스 파일\Homework</Filter>
+    </ClCompile>
+    <ClCompile Include="Class1208_1.cpp">
+      <Filter>소스 파일\A_class</Filter>
+    </ClCompile>
+    <ClCompile Include="Example.cpp">
+      <Filter>소스 파일\A_class</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_1.cpp">
+      <Filter>소스 파일\A_class</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_2.cpp">
+      <Filter>소스 파일\A_class</Filter>
+    </ClCompile>
+    <ClCompile Include="Input_Arr.cpp">
+      <Filter>소스 파일\myMemoTest</Filter>
+    </ClCompile>
+    <ClCompile Include="PriTestArrpointer.cpp">
+      <Filter>소스 파일\myMemoTest</Filter>
+    </ClCompile>
+    <ClCompile Include="Class1209_2.cpp">
+      <Filter>소스 파일\A_class</Filter>
+    </ClCompile>
+    <ClCompile Include="Class1208_0.cpp">
+      <Filter>소스 파일\A_class</Filter>
+    </ClCompile>
+    <ClCompile Include="Class1209_1.cpp">
+      <Filter>소스 파일\A_class</Filter>
+    </ClCompile>
+    <ClCompile Include="HomeWork_1209.cpp">
+      <Filter>소스 파일\Homework</Filter>
+    </ClCompile>
+    <ClCompile Include="Class1210.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Class1210_1.cpp">
+      <Filter>소스 파일\A_class</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Example_1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Example_2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Example.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Homework_1207.h">
+      <Filter>헤더 파일\homework</Filter>
+    </ClInclude>
+    <ClInclude Include="test_1208.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="class1208_.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class1208_1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="homework_1208.h">
+      <Filter>헤더 파일\homework</Filter>
+    </ClInclude>
+    <ClInclude Include="Input_Arr.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class_1209.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class1209_2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="HomeWork_1209.h">
+      <Filter>헤더 파일\homework</Filter>
+    </ClInclude>
+    <ClInclude Include="Class1210_1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class1210.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
