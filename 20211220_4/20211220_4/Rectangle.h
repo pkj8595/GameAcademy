@@ -14,7 +14,5 @@ public:
 
 	virtual double AreaCalculation();
 	virtual double compute();
-
-
 };
 

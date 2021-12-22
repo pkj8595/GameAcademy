@@ -27,5 +27,6 @@ public:
 	virtual double AreaCalculation() = 0;
 	virtual double compute() = 0;
 
+
 };
 

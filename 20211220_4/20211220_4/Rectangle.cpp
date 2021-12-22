@@ -28,4 +28,3 @@ double Rectangle::compute()
 	return _round;
 }
 
-
