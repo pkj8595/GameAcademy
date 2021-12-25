@@ -1,4 +1,4 @@
-#include "Player.h"
+ï»¿#include "Player.h"
 
 Player::Player()
 {
@@ -20,10 +20,10 @@ void Player::ShowState()
 	int addAtt = m_equipWeapon.attribute;
 	int addDef = m_equipArmor.attribute;
 
-	std::cout << "===============½ºÅÝ==============" << std::endl;
-	std::cout << "°ø°Ý·Â\t\t" << m_att << " + " << addAtt << std::endl;
-	std::cout << "¹æ¾î·Â\t\t" << m_def << " + " << addDef << std::endl;
-	std::cout << "===============¹«±â==============" << std::endl;
-	std::cout << "¹«±â\t\t" << m_equipWeapon.name << std::endl;
-	std::cout << "¹æ¾î±¸\t\t" << m_equipArmor.name << std::endl;
+	std::cout << "===============ìŠ¤í…Ÿ==============" << std::endl;
+	std::cout << "ê³µê²©ë ¥ \t\t" << m_att << " + " << addAtt << std::endl;
+	std::cout << "ë°©ì–´ë ¥ \t\t" << m_def << " + " << addDef << std::endl;
+	std::cout << "===============ë¬´ê¸°==============" << std::endl;
+	std::cout << "ë¬´ê¸° \t\t" << m_equipWeapon.name << std::endl;
+	std::cout << "ë°©ì–´êµ¬ \t\t" << m_equipArmor.name << std::endl;
 }
