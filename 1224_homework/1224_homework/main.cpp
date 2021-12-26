@@ -1,8 +1,12 @@
-#include<iostream>
 #include"Bingo.h"
+#include"SlidePuzzle.h"
 
 
 int main()
 {
-	Bingo bingo;
+	//Bingo bingo;
+	SlidePuzzle sp;
+
+	
+
 }
