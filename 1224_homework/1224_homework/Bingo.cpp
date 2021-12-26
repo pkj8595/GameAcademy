@@ -1,4 +1,4 @@
-#include "Bingo.h"
+﻿#include "Bingo.h"
 #include "Bingo.h"
 
 Bingo::Bingo()
@@ -20,7 +20,7 @@ void Bingo::Play()
 {
 	while (true)
 	{
-		cout << "���� : " << lineCount << endl;
+		cout << "빙고 : " << lineCount << endl;
 		Display();
 		InputNum();
 
@@ -32,7 +32,7 @@ void Bingo::Play()
 
 void Bingo::Display()
 {
-	cout << "�ѤѤѤѤѤѤѤѤѤѤ�" << endl;
+	cout << "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ" << endl;
 	for (int i = 0; i < BINGO_SIZE; i++)
 	{
 		for (int j = 0; j < BINGO_SIZE; j++)
@@ -57,7 +57,7 @@ void Bingo::InputNum()
 
 	if (selecNum > size || selecNum == 0)
 	{
-		cout << "�߸��� �Է�" << endl;
+		cout << "잘못된 입력" << endl;
 		return;
 	}
 
@@ -93,7 +93,7 @@ void Bingo::Init()
 	for (int i = 0; i < size; i++)
 	{
 		//*(parr+i) = i+1;
-		arr[0][i].img = "��";
+		arr[0][i].img = "■";
 		arr[0][i].num = i + 1;
 	}
 

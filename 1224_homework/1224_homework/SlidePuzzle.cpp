@@ -42,7 +42,7 @@ void SlidePuzzle::Play()
 
 void SlidePuzzle::Display()
 {
-	cout << "�ѤѤѤѤѤѤѤѤѤѤ�" << endl;
+	cout << "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ" << endl;
 	for (int i = 0; i < SLIDE_SIZE; i++)
 	{
 		for (int j = 0; j < SLIDE_SIZE; j++)
@@ -51,7 +51,7 @@ void SlidePuzzle::Display()
 		}
 		cout << endl;
 	}
-	cout << "�ѤѤѤѤѤѤѤѤѤѤ�" << endl;
+	cout << "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ" << endl;
 }
 
 void SlidePuzzle::Shuffle()
@@ -74,7 +74,7 @@ void SlidePuzzle::Shuffle()
 
 void SlidePuzzle::InputArrow()
 {
-	cout << "ȭ��ǥ�� �����̱� \n ġƮ -> 0" << endl;
+	cout << "화살표로 움직이기 \n 치트 -> 0" << endl;
 	int i;
 	int cNum;
 	i = _getch();
@@ -84,7 +84,7 @@ void SlidePuzzle::InputArrow()
 		switch (i)
 		{
 		case 72: 
-			//cout << "����";
+			//cout << "위쪽";
 			if (CheckNum(y - 1))
 			{
 				tempNum = arr[y][x];
@@ -94,7 +94,7 @@ void SlidePuzzle::InputArrow()
 			}
 			break;
 		case 80: 
-			//cout << "�Ʒ���";
+			//cout << "아래쪽";
 			if (CheckNum(y + 1))
 			{
 				tempNum = arr[y][x];
@@ -104,7 +104,7 @@ void SlidePuzzle::InputArrow()
 			}
 			break;
 		case 75: 
-			//cout << "����";
+			//cout << "왼쪽";
 			if (CheckNum(x - 1))
 			{
 				tempNum = arr[y][x];
@@ -114,7 +114,7 @@ void SlidePuzzle::InputArrow()
 			}
 			break;
 		case 77: 
-			//cout << "������"; 
+			//cout << "오른쪽"; 
 			if (CheckNum(x + 1))
 			{
 				tempNum = arr[y][x];
