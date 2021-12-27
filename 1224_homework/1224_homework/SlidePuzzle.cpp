@@ -1,4 +1,5 @@
-#include "SlidePuzzle.h"
+﻿#include "SlidePuzzle.h"
+
 
 SlidePuzzle::SlidePuzzle()
 {

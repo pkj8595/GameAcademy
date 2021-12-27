@@ -24,12 +24,18 @@
     <ClCompile Include="SlidePuzzle.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BingoGame.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bingo.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="SlidePuzzle.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="BingoGame.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

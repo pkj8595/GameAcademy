@@ -1,85 +1,63 @@
 ﻿#include "Bingo.h"
-#include "Bingo.h"
 
 Bingo::Bingo()
 {
-	srand(time(NULL));
-	size = BINGO_SIZE * BINGO_SIZE;
-	checkVec.reserve(size);
+	
+}
+//
+//Bingo::Bingo(bool ispalyer , int size)
+//{
+//	srand(time(NULL));
+//	_isPlayer = ispalyer;
+//	_size = size;
+//	_totalSize = size * size;
+//	Init();
+//	Shuffle();
+//	
+//}
 
+
+Bingo::Bingo(bool ispalyer)
+{
+	_isPlayer = ispalyer;
+	_size = BINGO_SIZE;
+	_totalSize = BINGO_SIZE * BINGO_SIZE;
 	Init();
-	Play();
+	Shuffle();
 
 }
 
 Bingo::~Bingo()
 {
+
 }
 
-void Bingo::Play()
+void Bingo::Init()
 {
-	while (true)
+	//2차 배열 동적 생성
+	/*arr = new STCard*[_size];
+	for (int i = 0; i < _size; i++)
 	{
-		cout << "빙고 : " << lineCount << endl;
-		Display();
-		InputNum();
+		arr[i] = new STCard[_size];
+	}*/
 
-		Sleep(500);
-		system("cls");
+	//배열 초기화
+	for (int i = 0; i < _totalSize; i++)
+	{
+		arr[0][i].img = "■";
+		arr[0][i].num = i + 1;
 	}
-
 }
 
-void Bingo::Display()
-{
-	cout << "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ" << endl;
-	for (int i = 0; i < BINGO_SIZE; i++)
-	{
-		for (int j = 0; j < BINGO_SIZE; j++)
-		{
-			if (IsInputNum(arr[i][j].num))
-			{
-				cout << arr[i][j].img << " | ";
-			}
-			else
-			{
-				cout << arr[i][j].num << " | ";
-			}
-		}
-		cout << endl;
-	}
-	cout << "========================" << endl;
-}
-
-void Bingo::InputNum()
-{
-	cin >> selecNum;
-
-	if (selecNum > size || selecNum == 0)
-	{
-		cout << "잘못된 입력" << endl;
-		return;
-	}
-
-	for (int i = 0; i < size; i++)
-	{
-		if (arr[0][i].num == selecNum)
-		{
-			checkVec.push_back(arr[0][i].num);
-			arr[0][i].img = "X";
-		}
-	}
-
-}
 
 void Bingo::Shuffle()
 {
 	int dest, sour, temp;
 
-	for (int i = 1; i < 100; i++)
+	for (int i = 0; i < 20; i++)
 	{
-		dest = rand() % size;
-		sour = rand() % size;
+		dest = rand() % _totalSize;
+		sour = rand() % _totalSize;
 
 		temp = arr[0][dest].num;
 		arr[0][dest].num = arr[0][sour].num;
@@ -87,40 +65,119 @@ void Bingo::Shuffle()
 	}
 }
 
-void Bingo::Init()
+void Bingo::Display()
 {
-	//cout << sizeof(parr) <<endl;		4
-	for (int i = 0; i < size; i++)
+	if (_isPlayer)
 	{
-		//*(parr+i) = i+1;
-		arr[0][i].img = "■";
-		arr[0][i].num = i + 1;
+		cout << "player" << endl;
+		cout << "bingo : "<<_lineCount << endl;
 	}
-
-	//for (int i = 0; i < size; i++)
-	//{
-	//	//cout << *(parr + i) << endl;
-	//	cout << arr[0][i] << endl;
-	//}
-	Shuffle();
+	else 
+	{
+		cout << "computer" << endl;
+		cout << "bingo : " << _lineCount << endl;
+	}
+	cout << "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ" << endl;
+	for (int i = 0; i < _size; i++)
+	{
+		for (int j = 0; j < _size; j++)
+		{
+			if (arr[i][j].num == 0)
+			{
+				cout << arr[i][j].img << "	";
+			}
+			else
+			{
+				cout << arr[i][j].num << "	";
+			}
+		}
+		cout << endl;
+	}
+	cout << "========================" << endl;
 }
 
-bool Bingo::IsInputNum(int num)
+int Bingo::CallNumber()
 {
-	for (iter = checkVec.begin(); iter != checkVec.end(); ++iter)
+	if (_isPlayer) 
 	{
-		if (*iter == num) return true;
+		cout<< "빙고 숫자 입력" << endl;
+		cin >> _inputNum;
 	}
-	return false;
+	else 
+	{
+		_inputNum = (rand() % _totalSize) + 1;
+	}
+
+	if (_inputNum > _totalSize || _inputNum == 0)
+	{
+		cout << "잘못된 입력" << endl;
+		CallNumber();
+	}
+
+	
+	return _inputNum;
+}
+
+void Bingo::CheckNumber(int inputNum)
+{
+	for (int i = 0; i < _totalSize; i++)
+	{
+		if (arr[0][i].num == inputNum)
+		{
+			arr[0][i].num = 0;
+			arr[0][i].img = "X";
+		}
+	}
 }
 
 void Bingo::CheckLine()
 {
-	int num = 0;
-	iter = find(checkVec.begin(), checkVec.end(), num);
-	for (int i = 0; i < BINGO_SIZE; i++)
+	_lineCount = 0;
+	bool xBool , yBool,cross1,cross2;
+	//cout << "Bingo::CheckLine" << endl;
+	for (int i = 0; i < _size; i++)
 	{
+		xBool = true;
+		yBool = true;
+		//열 체크 
+		for (int x = 0; x < _size; x++)
+		{
+			if (arr[i][x].num != 0) 
+			{
+				xBool = false;
+			}
+		}
 
+		//행 체크
+		for (int y = 0; y < _size; y++)
+		{
+			if (arr[y][i].num != 0)
+			{
+				yBool = false;
+			}
+		}
+		if (xBool ) _lineCount++;
+		if (yBool ) _lineCount++;
 	}
-	lineCount++;
+
+	cross1 = true;
+	for (int i = 0; i < _size; i++) {
+		if (arr[i][i].num != 0)
+		{
+			cross1 = false;
+		}
+	}
+	if (cross1) _lineCount++;
+
+	cross2 = true;
+	for (int i = 0, temp=0; i < _size; i++) 
+	{
+		temp = (_size - 1) - i;
+		if (arr[i][temp].num != 0)
+		{
+			cross2 = false;
+		}
+	}
+	if (cross2) _lineCount++;
+
 }

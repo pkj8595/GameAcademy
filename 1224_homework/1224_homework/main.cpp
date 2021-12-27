@@ -1,12 +1,14 @@
-#include"Bingo.h"
+﻿#include"BingoGame.h"
 #include"SlidePuzzle.h"
 
 
 int main()
 {
-	//Bingo bingo;
-	SlidePuzzle sp;
+	BingoGame bingo;
+	//SlidePuzzle sp;
 
 	
+
+
 
 }
